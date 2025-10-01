@@ -14,7 +14,7 @@ const Categories: React.FC = () => {
       : courses.filter((course) => course.category === selectedCategory);
 
   return (
-    <section className="py-12 px-6 bg-gray-50">
+    <section className="py-6 px-6 bg-gray-50">
       <SectionHeader
         title="Popular Categories"
         subtitle="Pick what you love most! These categories have everything you need to learn something awesome"

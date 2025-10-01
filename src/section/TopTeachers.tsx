@@ -5,7 +5,7 @@ import { teachers } from "../data/teachers";
 
 const TopTeachers: React.FC = () => {
   return (
-    <section className="py-12 px-6 bg-gray-50">
+    <section className="py-6 px-6 bg-gray-50">
       <SectionHeader
         title="Learn from Top Teachers"
         subtitle="Expert instructors who make learning fun and engaging for every child"
