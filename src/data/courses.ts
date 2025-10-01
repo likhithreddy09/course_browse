@@ -90,7 +90,20 @@ export const courses = [
     teacher: "Jane Smith",
     time: "Evening",
     duration: "3h 0m",
-    price: "$59",
+    price: "59",
+    image: "/assets/image_4.jpg"
+  },
+    {
+    id: 8,
+    title: "Chess Apps",
+    tags: ["Chess_Apps", "Chess"],
+    category: "Chess",
+    rating: 4.5,
+    learners: 900,
+    teacher: "Jane Smith",
+    time: "Afternoon",
+    duration: "3h 0m",
+    price: "59",
     image: "/assets/image_4.jpg"
   },
 ];

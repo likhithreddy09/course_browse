@@ -1,5 +1,6 @@
 import React from "react";
 import teacherImage from "../../public/assets/image_3.jpg";
+import { IndianRupee } from "lucide-react";
 
 export type CourseCardProps = {
   id?: number;
@@ -153,7 +154,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
             <span>{duration}</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <IconCurrency />
+            <IndianRupee size={12} />
             <span>{price}</span>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import image1 from "../../public/assets/image_3.jpg"
 
 type TeacherCardProps = {
   name: string;
@@ -15,7 +16,6 @@ const TeacherCard: React.FC<TeacherCardProps> = ({
   experience,
   students,
   specialty, 
-  avatar 
 }) => {
   return (
     <div className="p-6 w-[240px] text-center flex-shrink-0">
@@ -31,7 +31,7 @@ const TeacherCard: React.FC<TeacherCardProps> = ({
 
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16">
           <img
-            src={avatar}
+            src={image1}
             alt={name}
             className="w-full h-full rounded-full object-cover border-2 border-gray-200"
           />
