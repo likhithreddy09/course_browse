@@ -1,0 +1,97 @@
+export const courses = [
+  {
+    id: 1,
+    title: "Summer robotics camp: fun projects with auto arduino, Tinkercad",
+    tags: ["English", "Intermediate", "4 classes"],
+    rating: 4.9,
+    learners: 200,
+    teacher: "Daniel james",
+    time: "7-10 yrs",
+    duration: 45,
+    price: 299,
+    isSellingFast: true,
+    image: "/assets/image_4.jpg"
+  },
+  {
+    id: 2,
+    title: "Summer robotics camp: fun projects with auto arduino, Tinkercad",
+    tags: ["English", "Intermediate", "4 classes"],
+    rating: 4.9,
+    learners: 200,
+    teacher: "Daniel james",
+    time: "7-10 yrs",
+    duration: 45,
+    price: 299,
+    isSellingFast: false,
+    image: "/assets/image_4.jpg"
+  },
+  {
+    id: 3,
+    title: "Summer robotics camp: fun projects with auto arduino, Tinkercad",
+    tags: ["English", "Intermediate", "4 classes"],
+    rating: 4.9,
+    learners: 200,
+    teacher: "Daniel james",
+    time: "7-10 yrs",
+    duration: 45,
+    price: 299,
+    isSellingFast: false,
+    image: "/assets/image_4.jpg"
+  },
+  {
+    id: 4,
+    title: "Summer robotics camp: fun projects with auto arduino, Tinkercad",
+    tags: ["English", "Intermediate", "4 classes"],
+    rating: 4.9,
+    learners: 200,
+    teacher: "Daniel james",
+    time: "7-10 yrs",
+    duration: 45,
+    price: 299,
+    isSellingFast: false,
+    image: "/assets/image_4.jpg"
+  },
+  {
+    id: 5,
+    title: "Summer robotics camp: fun projects with auto arduino, Tinkercad",
+    tags: ["Native", "Flutter", "4 classes"],
+    rating: 4.9,
+    category: "App",
+    learners: 200,
+    teacher: "Daniel james",
+    time: "7-10 yrs",
+    duration: 45,
+    price: 299,
+    isSellingFast: false,
+    image: "/assets/image_4.jpg"
+  },
+
+   {
+    id: 6,
+    title: "React for Beginners",
+    tags: ["React", "Frontend"],
+    category: "Coding",
+    rating: 4.8,
+    learners: 1200,
+    teacher: "John Doe",
+    time: "Morning",
+    duration: "2h 30m",
+    price: "$49",
+    isSellingFast: true,
+    image: "/assets/image_4.jpg"
+  },
+  {
+    id: 7,
+    title: "Design Mobile Apps",
+    tags: ["UI/UX", "Figma"],
+    category: "App",
+    rating: 4.5,
+    learners: 900,
+    teacher: "Jane Smith",
+    time: "Evening",
+    duration: "3h 0m",
+    price: "$59",
+    image: "/assets/image_4.jpg"
+  },
+];
+
