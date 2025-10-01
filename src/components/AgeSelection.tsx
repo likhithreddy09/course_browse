@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 interface AgeGroup {
   min: number;
@@ -29,12 +31,38 @@ const AgeSelection: React.FC = () => {
     { min: 19, max: 20, color: 'bg-orange-50 border-orange-400 text-orange-700' },
   ];
 
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+
+  React.useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.05,
+      },
+    },
+  };
+
+  const buttonVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   const handleAgeClick = (min: number, max: number) => {
     console.log(`Selected age group: ${min}-${max}`);
   };
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50 font-[Poppins]">
+    <section
+      ref={ref}
+      className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50 font-[Poppins]"
+    >
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl sm:text-4xl text-center text-gray-900 font-medium mb-2">
           How Old Are You? 🎯
@@ -43,19 +71,25 @@ const AgeSelection: React.FC = () => {
           Pick your age and find the perfect courses just for you!
         </p>
 
-        {/* Horizontal scroll container */}
-        <div className="flex space-x-3 overflow-x-auto scrollbar-hide px-2">
+        <motion.div
+          className="flex space-x-3 overflow-x-auto scrollbar-hide px-2"
+          variants={containerVariants}
+          initial="hidden"
+          animate={controls}
+        >
           {ageGroups.map((age, index) => (
-            <button
+            <motion.button
               key={index}
               onClick={() => handleAgeClick(age.min, age.max)}
-              className={`${age.color} border-2 rounded-xl p-4 min-w-[80px] flex-shrink-0 text-center cursor-pointer shadow-sm hover:shadow-md active:scale-95`}
+              variants={buttonVariants}
+              whileTap={{ scale: 0.95 }}
+              className={`${age.color} border-2 rounded-xl p-4 min-w-[80px] flex-shrink-0 text-center cursor-pointer shadow-sm`}
             >
               <div className="text-sm font-bold">{age.min}-{age.max}</div>
               <div className="text-xs font-medium mt-1">Years</div>
-            </button>
+            </motion.button>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
